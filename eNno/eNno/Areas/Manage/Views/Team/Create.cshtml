@@ -1,0 +1,23 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post" asp-action="create" enctype="multipart/form-data">  
+    <div class="mb-3">
+        <label for="icon">Icon</label>
+        <input type="text" class="form-control" asp-for="@Model.FullName" placeholder="Icon">
+    </div>
+    <div class="mb-3">
+        <label for="Count">Count</label>
+        <input type="number" class="form-control" asp-for="@Model.Position" placeholder="Count">
+    </div>
+    <div class="mb-3">
+        <label for="Desc">Desc</label>
+        <input type="text" class="form-control" asp-for="@Model.Desc" placeholder="Desc">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

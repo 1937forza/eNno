@@ -1,0 +1,46 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+<div class="d-flex justify-content-sm-around">
+    <h1>Index</h1>
+    <a href="#"><i class="fas fa-plus-square btn btn-primary"></i></a>
+</div>
+
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Position</th>
+            <th scope="col">Desc</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th scope="row">@count</th>
+                <td>@item.FullName</td>
+                <td>@item.Position</td>
+                <td>@item.Desc</td>
+                <td>@item.Image</td>
+                <td>
+                    <a href="#"><i class="fas fa-edit btn btn-warning"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt btn btn-danger"></i></a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
